@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shooty</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Three.js from a stable CDN -->
+<script defer src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script defer src="config.js"></script>
+<script defer src="ui.js"></script>
+<script defer src="physics.js"></script>
+<script defer src="net.js"></script>
+<script defer src="game.js"></script>
+<script defer src="main.js"></script>
+</head>
+<body>
+<div id="menu">
+<div class="menu-card">
+<h1>Shooty</h1>
+<p class="tag">swift. snappy. satisfying clips.</p>
+<input id="nameInput" type="text" maxlength="16" placeholder="Enter your name" />
+<input id="serverInput" type="text" placeholder="wss://YOUR-RENDER-SERVICE.onrender.com" />
+<button id="playBtn">Play</button>
+<div class="hint">WASD to move · Space to jump · Shift to sprint · Click to shoot · T to chat · L for leaderboard</div>
+</div>
+</div>
+
+
+<canvas id="game"></canvas>
+
+
+<div id="hud">
+<div id="crosshair"></div>
+<div id="ammo">∞</div>
+<div id="status"></div>
+</div>
+
+
+<div id="chat">
+<div id="chatLog"></div>
+<input id="chatInput" type="text" placeholder="type message… (Enter to send, Esc to cancel)" />
+</div>
+
+
+<div id="leaderboard" class="panel hidden">
+<h3>Leaderboard</h3>
+<div id="board"></div>
+</div>
+</body>
+</html>
