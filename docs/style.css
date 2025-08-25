@@ -1,0 +1,34 @@
+:root{
+--bg:#0b0f14; --fg:#e5f0ff; --accent:#6ad3ff; --a2:#9b6aff; --glass:rgba(255,255,255,.06);
+}
+*{box-sizing:border-box} html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+#menu{position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(1200px 600px at 30% 20%,rgba(106,211,255,.18),transparent),radial-gradient(800px 500px at 80% 70%,rgba(155,106,255,.18),transparent),var(--bg);}
+.menu-card{width:min(92vw,420px);padding:24px;border-radius:24px;background:linear-gradient( to bottom right, rgba(255,255,255,.09), rgba(255,255,255,.05));backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,.08); box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.menu-card h1{margin:4px 0 6px; font-size:48px;letter-spacing:.5px}
+.tag{opacity:.8;margin:0 0 16px;font-size:14px}
+.menu-card input{width:100%;padding:12px 14px;margin:6px 0 10px;background:#0f141a;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:var(--fg);outline:none}
+.menu-card input:focus{border-color:var(--accent)}
+.menu-card button{width:100%;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--a2));color:#071019;border:none;font-weight:700;cursor:pointer}
+.hint{margin-top:12px;opacity:.7;font-size:12px}
+
+
+#game{position:fixed;inset:0;display:block}
+
+
+#hud{position:fixed;inset:0;pointer-events:none}
+#crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border:2px solid rgba(255,255,255,.9);border-radius:50%;box-shadow:0 0 8px rgba(106,211,255,.5)}
+#ammo{position:absolute;right:18px;bottom:18px;background:var(--glass);padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+#status{position:absolute;left:18px;bottom:18px;opacity:.8}
+
+
+#chat{position:fixed;left:14px;bottom:14px;width:34ch;}
+#chatLog{max-height:30vh;overflow:auto;padding:8px 10px;margin-bottom:6px;background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:12px;font-size:14px}
+#chatInput{display:none;width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0f141a;color:var(--fg)}
+.msg{margin:2px 0}
+.msg .n{color:var(--accent)}
+
+
+.panel{position:fixed;right:14px;top:14px;width:260px;background:var(--glass);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:10px 12px}
+.panel.hidden{display:none}
+#board{display:grid;grid-template-columns:1fr auto auto;gap:6px 8px;font-family:ui-monospace,Consolas,monospace}
+#board .hdr{opacity:.7}
